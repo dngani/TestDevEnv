@@ -1,11 +1,11 @@
-#Purchase as smart contract
+# Purchase as smart contract
 a seller can generate a smart contract with the order sum and the buyer have to confirm that he has received and pay it. The Buyer can also confirm that he has received the item. 
 
-#Creation of the smart contract
+# Creation of the smart contract
 
 we, as seller have to deploy a smart contract with the given order sum.
 
-#Function Calls
+# Function Calls
 
 ## to abort the purchase (as seller)
 ```
