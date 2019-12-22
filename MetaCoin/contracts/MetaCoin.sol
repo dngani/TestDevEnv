@@ -10,12 +10,27 @@ import "./ConvertLib.sol";
 contract MetaCoin {
 	mapping (address => uint) balances;
 
+	ConvertLib.Article test;
+
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
-	constructor() public {
+	/*constructor() public {
 		balances[tx.origin] = 10000;
-	}
+	}*/
 
+	constructor( ) public payable {
+		balances[tx.origin] = 10000;
+
+		
+		test.pageid = 1;
+		test.revid = 15;
+		test.url ="";
+		test.title = "";
+		test.description = "";
+		test.lastmodified = "";
+
+	    //test.register = reg;
+	}
 	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (balances[msg.sender] < amount) return false;
 		balances[msg.sender] -= amount;
